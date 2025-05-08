@@ -1,7 +1,9 @@
-﻿namespace WebApplication1.Services
+﻿using WebApplication1.Models;
+
+namespace WebApplication1.Services
 {
     public interface IGitRepoService
     {
-        string CloneRepository(string repoUrl);
+        IEnumerable<BackupItem> CloneRepository(string repoUrl);
     }
 }

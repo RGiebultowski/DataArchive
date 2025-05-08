@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            gitRepoService.CloneRepository(request.RepoUrl);
+            _= gitRepoService.CloneRepository(request.RepoUrl).ToArray();
             await Task.CompletedTask;
             return Ok(new { message = "Repo Archived" });
         }

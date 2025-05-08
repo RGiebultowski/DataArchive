@@ -20,7 +20,7 @@ namespace WebApplication1.Services
             ChangeFileAttributes(file, path);
 
             DeleteTempRepo(path);
-            yield return new BackupItem("", zipStream); 
+            yield return new BackupItem($"repo_{DateTime.UtcNow}", zipStream); 
         }
 
         public void ChangeFileAttributes(DirectoryInfo file, string filePath)

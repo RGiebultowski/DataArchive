@@ -25,7 +25,7 @@ namespace WebApplication1.Controllers
 
             gitRepoService.CloneRepository(request.RepoUrl);
             await Task.CompletedTask;
-            return Ok();
+            return Ok(new { message = "Repo Archived" });
         }
     }
 }
